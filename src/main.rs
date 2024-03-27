@@ -8,6 +8,28 @@ use std::io::{BufRead, BufReader, ErrorKind, Write};
 
 fn main() {}
 
+fn generate_random_number() {
+    let random_num = rand::thread_rng().gen_range(1..101);
+    println!("Random : {}", random_num);
+}
+
+fn if_else() {
+    let age = 8;
+    if (age >= 1) && (age <= 18) {
+        println!("Important Birthday");
+    } else if (age == 21) || (age == 50) {
+        println!("Important Birthday");
+    } else if age >= 65 {
+        println!("Important Birthday");
+    } else {
+        println!("Not an Important Birthday");
+    }
+
+    let mut my_age = 47;
+    let can_drive = if my_age >= 18 { true } else { false };
+    println!("Can Drive : {}", can_drive);
+}
+
 fn some_math_ops() {
     let num_1: f32 = 1.111111111111111;
     println!("f32 : {}", num_1 + 0.111111111111111);
