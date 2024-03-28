@@ -6,7 +6,9 @@ use std::fs::File;
 use std::io;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 
-fn main() {}
+fn main() {
+    let arr_1 = [1, 2, 3];
+}
 
 fn match_values() {
     let age2 = 21;
