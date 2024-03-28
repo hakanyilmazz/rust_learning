@@ -8,6 +8,24 @@ use std::io::{BufRead, BufReader, ErrorKind, Write};
 
 fn main() {}
 
+fn match_values() {
+    let age2 = 21;
+    match age2 {
+        1..=18 => println!("1 - 18"),
+        21 | 50 => println!("21 - 50"),
+        65..=i32::MAX => println!("65 - .."),
+        _ => println!("Not matched"),
+    };
+
+    let my_age = 100;
+    let test = 18;
+    match my_age.cmp(&test) {
+        Ordering::Less => println!("less"),
+        Ordering::Greater => println!("Greater"),
+        Ordering::Equal => println!("Equal"),
+    };
+}
+
 fn generate_random_number() {
     let random_num = rand::thread_rng().gen_range(1..101);
     println!("Random : {}", random_num);
